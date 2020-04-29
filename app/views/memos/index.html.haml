@@ -1,0 +1,46 @@
+= render "header"
+.main
+  .main__routing-ber
+    ルーティング業務
+    .main__routing-ber__box
+      .main__routing-ber__box__time-todo
+        .main__routing-ber__box__time-todo__time
+          開始時間：
+        .main__routing-ber__box__time-todo__todo
+          行う事　：
+      .main__routing-ber__box__edit-delete
+        .main__routing-ber__box__edit-delete__editbtn
+          = link_to '編集', class:'routing-edit'
+        .main__routing-ber__box__edit-delete__deletebtn
+          = link_to '削除', class:'routing-delete'
+
+  
+  .main__month-day
+    .main__month-day__month-ber
+      月、週のルーチング
+      .main__month-day__month-ber__box
+        .main__month-day__month-ber__box__time-todo       
+          .main__month-day__month-ber__box__time
+            期限　：
+          .main__month-day__month-ber__box__todo
+            行う事：
+        .main__month-day__month-ber__edit-delete
+          .main__month-day__month-ber__edit-delete__editbtn  
+            = link_to '編集', class:'routing-edit'  
+          .main__month-day__month-ber__edit-delete__deletebtn
+            = link_to '削除', class:'routing-delete'
+
+
+    .main__month-day__today-ber
+      その日のルーティング
+      .main__month-day__today-ber__box
+        .main__month-day__month-ber__box__time-todo           
+          .main__month-day__today-ber__box__todo
+            2018月01日12日
+          .main__month-day__today-ber__box__todo
+            職務履歴書
+        .main__month-day__month-ber__edit-delete
+          .main__month-day__month-ber__edit-delete__editbtn  
+            = link_to '編集', class:'routing-edit'   
+          .main__month-day__month-ber__edit-delete__deletebtn
+            = link_to '削除', class:'routing-delete'

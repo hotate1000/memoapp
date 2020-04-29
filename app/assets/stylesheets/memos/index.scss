@@ -1,0 +1,66 @@
+.main{
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top:30px;
+  &__routing-ber{
+    margin-right: 50px;
+    &__box{
+      width: 300px;
+      background-color: red;
+      &__time-todo{
+        &__time{
+
+        }
+        &__todo{
+
+        }
+      }
+      &__edit-delete{
+        display: flex;
+        justify-content: center;
+        &__edit{
+
+        }
+        &__delete{
+
+        }
+      }
+
+
+
+    }
+  }
+
+  &__month-day{
+    display: flex;
+    &__month-ber{
+      &__box{
+        width: 400px;
+        background-color:yellow;
+
+        &__fikkingtime{
+
+        }
+        &__todo{
+
+        }
+      }
+    }
+
+    &__today-ber{
+      &__box{
+        width: 400px;
+        background-color:green;
+
+        &__fikkingtime{
+
+        }
+        &__todo{
+
+        }
+      }
+    }
+  }
+}

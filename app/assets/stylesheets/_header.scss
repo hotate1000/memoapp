@@ -1,0 +1,20 @@
+.header{
+  height: 160px;
+  background-color: black;
+  width: 100vw;
+
+  &__main{
+    &__top{
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      .rogo{
+        width: 300px;
+      }
+    }
+    &__under{
+      height: 40px;
+      background: repeating-linear-gradient(to top, black, black 5px, lightgray 10px);
+    }
+  }
+}
