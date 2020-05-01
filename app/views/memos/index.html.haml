@@ -1,21 +1,25 @@
 = render "header"
 .main
   .main__routing-ber
-    ルーティング業務
+    = link_to '新規投稿',new_memo_path, class:'routing-new' 
     -# =if @messages.present? 
-    - @rposts.each do |r|
+    - @memos.each do |m|
       .main__routing-ber__box
         .main__routing-ber__box__time-todo
+          .main__routing-ber__box__time-todo__deadline
+            期限：
+            = m.deadline
           .main__routing-ber__box__time-todo__time
-            開始時間：<br>
-            = r.created_at
+            時間：
+            = m.time
           .main__routing-ber__box__time-todo__todo
             行う事：<br>
-            = r.comment
+            = m.comment
         .main__routing-ber__box__edit-delete
           .main__routing-ber__box__edit-delete__editbtn
-            = link_to '編集',new_memo_path, class:'routing-edit' 
-              
+            = link_to '詳細',memo_path(m.id), class:'routing-edit' 
+          .main__routing-ber__box__edit-delete__editbtn
+            = link_to '編集',edit_memo_path(m.id), class:'routing-edit' 
           .main__routing-ber__box__edit-delete__deletebtn
             = link_to '#',class:'routing-delete' do
               削除

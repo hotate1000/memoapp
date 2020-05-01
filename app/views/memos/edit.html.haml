@@ -1,0 +1,14 @@
+=@memo.deadline
+=@memo.time
+=@memo.comment
+
+
+= render "header"
+.new-rpost-main
+  .newrpost-main__title
+    新規登録
+  =form_with model: @memo, class:"aaa" ,local: true do |m|
+    =m.text_field :deadline, class:"rpost-deadline", placeholder:"期限"
+    =m.text_field :time, class:"rpost-time",placeholder:"開始時間"
+    =m.text_area :comment, class:"rpost-comment", placeholder:"行う事"
+    =m.submit "投稿する",class:"rpost-submit"

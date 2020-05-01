@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RpostTest < ActiveSupport::TestCase
+class MemoTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
