@@ -1,12 +1,3 @@
-
-
-@mixin text() {
-  display: block;
-  width: 100%;
-  height: 50px;
-  font-size: 18px;
-}
-
 .new-memo-body{
   height: 100vh;
 }
@@ -32,28 +23,48 @@
   .new-form {
     width: 85%;
     margin: 0 auto;
-    
     &__deadline{
       @include text();
     }
-    &__time{
-      @include text();
-      margin-top: 20px;
+    &__timebox{
+      display: flex;
+      &__letter {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        width: 120px;
+      }
+      &__time{
+        @include text();
+        width: 100%;
+      }
     }
-    &__comment{
-      @include text();
-      margin-top: 20px;
-      height: 280px;
-      display: block;
-      padding-top: 10px;
+
+    &__commentbox {
+      display: flex;
+      margin-top: 30px;
+      &__letter {
+        display: block;
+        height: 50px;
+        line-height: 47px;
+        font-size: 18px;
+        width: 120px;
+      }
+      &__comment{
+        @include text();
+        height: 320px;
+        padding-top: 10px;
+      }
     }
+
     &__submit{
       display: block;
-      margin: 20px auto;
+      margin: 30px auto;
       width: 30%;
       height: 30px;
-      -webkit-appearance: button;
-      font-weight: 500;
+      border-radius: 5px;
+      background-color: rgb(235, 235, 235);
     }
   }
 }
