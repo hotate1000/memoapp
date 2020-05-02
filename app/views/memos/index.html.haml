@@ -2,18 +2,17 @@
 .main
   .main__routing-ber
     = link_to '新規投稿',new_memo_path, class:'routing-new' 
-    -# =if @messages.present? 
     - @memos.each do |m|
       .main__routing-ber__box
         .main__routing-ber__box__time-todo
           .main__routing-ber__box__time-todo__deadline
-            期限：
-            = m.deadline
+            -# 期限：
+            -# = m.deadline
           .main__routing-ber__box__time-todo__time
-            時間：
+            時　間：
             = m.time
           .main__routing-ber__box__time-todo__todo
-            行う事：<br>
+            行う事：
             = m.comment
         .main__routing-ber__box__edit-delete
           .main__routing-ber__box__edit-delete__editbtn
@@ -21,8 +20,7 @@
           .main__routing-ber__box__edit-delete__editbtn
             = link_to '編集',edit_memo_path(m.id), class:'routing-edit' 
           .main__routing-ber__box__edit-delete__deletebtn
-            = link_to '#',class:'routing-delete' do
-              削除
+            = link_to '削除',memo_path(m.id), method: :delete, class:'routing-delete' 
 
     
   .main__month-day
