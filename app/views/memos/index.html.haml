@@ -1,13 +1,12 @@
 = render "header"
 .main
   .main__routing-ber
+    日々のルーティング
     = link_to '新規投稿',new_memo_path, class:'routing-new' 
     - @memos.each do |m|
       .main__routing-ber__box
         .main__routing-ber__box__time-todo
           .main__routing-ber__box__time-todo__deadline
-            -# 期限：
-            -# = m.deadline
           .main__routing-ber__box__time-todo__time
             時　間：
             = m.time
@@ -15,8 +14,8 @@
             行う事：
             = m.comment
         .main__routing-ber__box__edit-delete
-          .main__routing-ber__box__edit-delete__editbtn
-            = link_to '詳細',memo_path(m.id), class:'routing-edit' 
+          .main__routing-ber__box__edit-delete__detailbtn
+            = link_to '詳細',memo_path(m.id), class:'routing-detail' 
           .main__routing-ber__box__edit-delete__editbtn
             = link_to '編集',edit_memo_path(m.id), class:'routing-edit' 
           .main__routing-ber__box__edit-delete__deletebtn
@@ -25,18 +24,22 @@
     
   .main__month-day
     .main__month-day__month-ber
-      月、週のルーチング
-      .main__month-day__month-ber__box
-        .main__month-day__month-ber__box__time-todo       
-          .main__month-day__month-ber__box__time
-            期限：
-          .main__month-day__month-ber__box__todo
-            行う事：
-        .main__month-day__month-ber__edit-delete
-          .main__month-day__month-ber__edit-delete__editbtn  
-            = link_to '編集', class:'routing-edit'  
-          .main__month-day__month-ber__edit-delete__deletebtn
-            = link_to '削除', class:'routing-delete'
+      長期の予定
+      = link_to '新規投稿',new_mmemo_path, class:'month-new'
+      - @mmemos.each do |mm|
+        .main__month-day__month-ber__box
+          .main__month-day__month-ber__box__time-todo       
+            .main__month-day__month-ber__box__time
+              期　限：
+              =mm.deadline
+            .main__month-day__month-ber__box__todo
+              行う事：
+              = mm.comment
+          .main__month-day__month-ber__edit-delete
+            .main__month-day__month-ber__edit-delete__editbtn  
+              = link_to '編集', class:'routing-edit'  
+            .main__month-day__month-ber__edit-delete__deletebtn
+              = link_to '削除', class:'routing-delete'
 
 
     .main__month-day__today-ber
@@ -52,3 +55,4 @@
             = link_to '編集', class:'routing-edit'   
           .main__month-day__month-ber__edit-delete__deletebtn
             = link_to '削除', class:'routing-delete'
+          

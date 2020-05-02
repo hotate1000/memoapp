@@ -1,3 +1,17 @@
+@mixin btn() {
+  text-decoration: none;
+  background-color: rgb(235, 235, 235);
+  filter: drop-shadow(1px 1px 1px rgba(60,60,60,5));
+  border-radius: 3px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  border: solid 1px rgb(0, 0, 0);
+  font-size: 13px;
+  color: black;
+}
+
 .main{
   max-width: 1500px;
   margin: 0 auto;
@@ -9,36 +23,42 @@
     &__box{
       width: 300px;
       background-color: red;
-      margin-bottom: 10px;
+      padding:10px 10px 7px 10px;
       &__time-todo{
+        padding-bottom:15px;
         &__time{
-
         }
         &__todo{
-
         }
       }
+
       &__edit-delete{
         display: flex;
         justify-content: center;
-        padding-bottom: 5px;
-      
+        &__detailbtn{
+          text-decoration: none;
+          .routing-detail{
+            @include btn();
+            margin-right: 25px;
+            width: 45px;
+          }
+        }
         &__editbtn{
           text-decoration: none;
           .routing-edit{
             @include btn();
-            margin-right: 10px;
+            margin-right: 25px;
+            width: 45px;
           }
         }
         &__deletebtn {
+          text-decoration: none;
           .routing-delete{
             @include btn();
-
+            width: 45px;
           }
         }
-        
         &__delete{
-
         }
       }
 
