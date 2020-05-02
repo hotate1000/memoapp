@@ -1,0 +1,16 @@
+= render "header"
+.new-memo-body
+  .new-memo-main
+    .new-memo-main__title
+      新規登録ページ（日々のルーティング）
+    =form_with model: @memo, class:"new-form" ,local: true do |r|
+      -# =r.text_field :deadline, class:"new-form__deadline", placeholder:"  期限"
+      .new-form__timebox
+        .new-form__timebox__letter
+          開始時間：
+        =r.text_field :time, class:"new-form__timebox__time",placeholder:"  入力してください。"
+      .new-form__commentbox
+        .new-form__commentbox__letter
+          行う事　：    
+        =r.text_area :comment, class:"new-form__commentbox__comment", placeholder:"  入力してください。"
+      =r.submit "投稿する",class:"new-form__submit"

@@ -9,6 +9,7 @@
     &__box{
       width: 300px;
       background-color: red;
+      margin-bottom: 10px;
       &__time-todo{
         &__time{
 
@@ -20,9 +21,22 @@
       &__edit-delete{
         display: flex;
         justify-content: center;
-        &__edit{
-
+        padding-bottom: 5px;
+      
+        &__editbtn{
+          text-decoration: none;
+          .routing-edit{
+            @include btn();
+            margin-right: 10px;
+          }
         }
+        &__deletebtn {
+          .routing-delete{
+            @include btn();
+
+          }
+        }
+        
         &__delete{
 
         }

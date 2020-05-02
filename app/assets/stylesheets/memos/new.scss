@@ -1,0 +1,69 @@
+.new-memo-body{
+  height: 100vh;
+}
+
+.new-memo-main{
+  min-width: 650px;
+  width: 70%;
+  height: 600px;
+  margin: 0 auto;
+  margin-top:50px;
+  background-color: white;
+
+  &__title{
+    font-size: 24px;
+    text-align: center;
+    padding:10px 0 30px 0;
+    font-weight: 700;
+  }
+
+  .new-form {
+    width: 85%;
+    margin: 0 auto;
+    &__deadline{
+      @include text();
+    }
+    &__timebox{
+      display: flex;
+      &__letter {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        width: 120px;
+      }
+      &__time{
+        @include text();
+        width: 100%;
+      }
+    }
+
+    &__commentbox {
+      display: flex;
+      margin-top: 30px;
+      &__letter {
+        display: block;
+        height: 50px;
+        line-height: 47px;
+        font-size: 18px;
+        width: 120px;
+      }
+      &__comment{
+        @include text();
+        height: 320px;
+        padding-top: 10px;
+      }
+    }
+
+    &__submit{
+      display: block;
+      margin: 30px auto;
+      width: 30%;
+      height: 30px;
+      border-radius: 5px;
+      background-color: rgb(235, 235, 235);
+    }
+  }
+}
+
+
