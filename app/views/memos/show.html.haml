@@ -3,17 +3,17 @@
   .show-memo-main
     .show-memo-main__title
       詳細ページ（日々のルーティング）
-      .show-memo-main__title__form
-        .show-memo-main__title__form__timebox
-          .show-memo-main__title__form__timebox__letter
-            開始時間：
-          .show-memo-main__title__form__timebox__time
-            = @memo.time
-        .show-memo-main__title__form__commentbox
-          .show-memo-main__title__form__commentbox__letter        
-            行う事　：
-          .show-memo-main__title__form__commentbox__time
-            = @memo.comment 
-        
-        =link_to '編集',edit_memo_path,class: 'show-memo-main__title__link'
-  
+    .show-form
+      .show-form__timebox
+        .show-form__timebox__letter
+          開始時間：
+        .show-form__timebox__time
+          = @memo.time
+      .show-form__commentbox
+        .show-form__commentbox__letter        
+          行う事　：
+        .show-form__commentbox__comment
+          = @memo.comment 
+      .show-form__submit
+        =link_to '編集',edit_memo_path,class: 'show-form__submit__link'
+

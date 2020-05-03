@@ -4,7 +4,7 @@
 
 .new-memo-main{
   min-width: 650px;
-  width: 70%;
+  width: 55%;
   height: 600px;
   margin: 0 auto;
   margin-top:50px;
@@ -20,9 +20,9 @@
   .new-form {
     width: 85%;
     margin: 0 auto;
-    &__deadline{
-      @include text();
-    }
+    // &__deadline{
+    //   @include text();
+    // }
     &__timebox{
       display: flex;
       &__letter {

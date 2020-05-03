@@ -9,10 +9,10 @@
           .main__routing-ber__box__time-todo__deadline
           .main__routing-ber__box__time-todo__time
             時　間：
-            = m.time
+            = m.time.truncate(15)
           .main__routing-ber__box__time-todo__todo
             行う事：
-            = m.comment
+            = m.comment.truncate(15)
         .main__routing-ber__box__edit-delete
           .main__routing-ber__box__edit-delete__detailbtn
             = link_to '詳細',memo_path(m.id), class:'routing-detail' 
@@ -28,18 +28,20 @@
       = link_to '新規投稿',new_mmemo_path, class:'month-new'
       - @mmemos.each do |mm|
         .main__month-day__month-ber__box
-          .main__month-day__month-ber__box__time-todo       
-            .main__month-day__month-ber__box__time
+          .main__month-day__month-ber__box__detailbtn-todo       
+            .main__month-day__month-ber__box__detailbtn-todo__detailbtn
               期　限：
-              =mm.deadline
-            .main__month-day__month-ber__box__todo
+              = mm.deadline
+            .main__month-day__month-ber__box__detailbtn-todo__todo
               行う事：
               = mm.comment
-          .main__month-day__month-ber__edit-delete
-            .main__month-day__month-ber__edit-delete__editbtn  
-              = link_to '編集', class:'routing-edit'  
-            .main__month-day__month-ber__edit-delete__deletebtn
-              = link_to '削除', class:'routing-delete'
+          .main__month-day__month-ber__box__edit-delete
+            .main__month-day__month-ber__box__edit-delete__detailbtn
+              = link_to '詳細',root_path, class:'month-detail'  
+            .main__month-day__month-ber__box__edit-delete__editbtn  
+              = link_to '編集',root_path, class:'month-edit'  
+            .main__month-day__month-ber__box__edit-delete__deletebtn
+              = link_to '削除',root_path, class:'month-delete'
 
 
     .main__month-day__today-ber
