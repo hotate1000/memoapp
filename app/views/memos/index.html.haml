@@ -31,17 +31,17 @@
           .main__month-day__month-ber__box__detailbtn-todo       
             .main__month-day__month-ber__box__detailbtn-todo__detailbtn
               期　限：
-              = mm.deadline
+              = mm.deadline.truncate(25)
             .main__month-day__month-ber__box__detailbtn-todo__todo
               行う事：
-              = mm.comment
+              = mm.comment.truncate(25)
           .main__month-day__month-ber__box__edit-delete
             .main__month-day__month-ber__box__edit-delete__detailbtn
-              = link_to '詳細',root_path, class:'month-detail'  
+              = link_to '詳細',mmemo_path(mm.id), class:'month-detail'  
             .main__month-day__month-ber__box__edit-delete__editbtn  
-              = link_to '編集',root_path, class:'month-edit'  
+              = link_to '編集',edit_mmemo_path(mm.id), class:'month-edit'  
             .main__month-day__month-ber__box__edit-delete__deletebtn
-              = link_to '削除',root_path, class:'month-delete'
+              = link_to '削除',mmemo_path(mm.id),method: :delete,class:'month-delete'
 
 
     .main__month-day__today-ber

@@ -72,9 +72,11 @@
       }
       &__box{
         width: 500px;
-        background-color:yellow;
+        background-color:rgb(130, 130, 130);
         padding:10px 10px 7px 10px;
         margin-bottom: 10px;
+        color: white;
+        // border: solid 1px black;
         &__detailbtn-todo{
           padding-bottom:15px;
           &__detailbtn{
