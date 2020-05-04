@@ -1,8 +1,11 @@
 = render "header"
 .main
   .main__routing-ber
-    日々のルーティング
-    = link_to '新規投稿',new_memo_path, class:'routing-new' 
+    .main__routing-ber__letter-link
+      .main__routing-ber__letter-link__letter
+        日々のルーティング
+      .main__routing-ber__letter-link__link
+        = link_to '新規投稿',new_memo_path, class:'routing-new' 
     - @memos.each do |m|
       .main__routing-ber__box
         .main__routing-ber__box__time-todo
@@ -24,8 +27,11 @@
     
   .main__month-day
     .main__month-day__month-ber
-      長期の予定
-      = link_to '新規投稿',new_mmemo_path, class:'month-new'
+      .main__month-day__month-ber__letter-link
+        .main__month-day__month-ber__letter-link__letter
+          長期の予定
+        .main__month-day__month-ber__letter-link__link
+          = link_to '新規投稿',new_mmemo_path, class:'month-new'
       - @mmemos.each do |mm|
         .main__month-day__month-ber__box
           .main__month-day__month-ber__box__detailbtn-todo       

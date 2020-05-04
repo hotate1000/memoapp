@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   # resources :memos  
   resources :memos
   resources :mmemos
+  resources :dmemos
 end

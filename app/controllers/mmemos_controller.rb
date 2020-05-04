@@ -1,7 +1,4 @@
 class MmemosController < ApplicationController
-
-  def index
-  end
   
   def new
     @mmemo = Mmemo.new

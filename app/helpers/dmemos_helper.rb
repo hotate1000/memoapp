@@ -1,0 +1,2 @@
+module DmemosHelper
+end

@@ -2,6 +2,7 @@ class MemosController < ApplicationController
   def index
     @memos = Memo.all
     @mmemos = Mmemo.all
+    @dmemos = Dmemo.all
   end
 
   def new
