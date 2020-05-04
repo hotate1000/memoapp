@@ -1,19 +1,18 @@
-= render "header"
+= render "memos/header"
 .show-memo-body
   .show-memo-main
     .show-memo-main__title
-      詳細ページ（日々のルーティング）
+      詳細ページ（長期的な予定）
     .show-form
       .show-form__timebox
         .show-form__timebox__letter
           開始時間：
         .show-form__timebox__time
-          = @memo.time
+          = @mmemo.deadline
       .show-form__commentbox
         .show-form__commentbox__letter        
           行う事　：
         .show-form__commentbox__comment
-          = @memo.comment 
+          = @mmemo.comment 
       .show-form__submit
-        =link_to '編集',edit_memo_path,class: 'show-form__submit__link'
-
+        =link_to '編集',edit_mmemo_path,class: 'show-form__submit__link'

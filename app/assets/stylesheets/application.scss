@@ -3,3 +3,9 @@
 @import "memos/variable";
 @import "memos/index";
 @import "memos/new";
+@import "memos/show";
+
+* {
+  box-sizing: border-box;
+  // paddingやborderを行っても、要素の大きさがwidthやheightで指定したサイズのまま変わらなくする。
+}

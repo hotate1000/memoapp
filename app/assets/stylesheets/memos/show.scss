@@ -1,8 +1,10 @@
-.new-memo-body{
-  height: 100vh;
+
+
+.show-memo-body{
+  height: 110vh;
 }
 
-.new-memo-main{
+.show-memo-main{
   min-width: 650px;
   width: 55%;
   height: 600px;
@@ -16,54 +18,59 @@
     padding:10px 0 30px 0;
     font-weight: 700;
   }
-
-  .new-form {
+  
+  .show-form {
     width: 85%;
     margin: 0 auto;
-    // &__deadline{
-    //   @include text();
-    // }
+    height: 100vh;
+
     &__timebox{
       display: flex;
+      padding-top:12px;
       &__letter {
-        display: block;
         height: 50px;
-        line-height: 50px;
         font-size: 18px;
         width: 120px;
+        // font-weight: 600;
       }
       &__time{
-        @include text();
         width: 100%;
+        font-size: 16px;
+        padding-left: 2px;
       }
     }
-
+    
     &__commentbox {
       display: flex;
-      margin-top: 30px;
+      padding-top:28px;
       &__letter {
-        display: block;
         height: 50px;
-        line-height: 47px;
         font-size: 18px;
         width: 120px;
+        // font-weight: 60zzzzz0;
       }
       &__comment{
-        @include text();
-        height: 320px;
-        padding-top: 10px;
+        width:100%;
+        font-size: 16px;
+        padding: 0 0 20px 2px;
       }
     }
-
-    &__submit{
-      display: block;
+    &__submit{   
       margin: 30px auto;
       width: 30%;
       height: 30px;
       border-radius: 5px;
       background-color: rgb(235, 235, 235);
+      border:solid 1px;
+      &__link{
+        color: black;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
-
-
+    
+    
+    
