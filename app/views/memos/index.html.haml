@@ -7,22 +7,23 @@
       .main__routing-ber__letter-link__link
         = link_to '新規投稿',new_memo_path, class:'routing-new' 
     - @memos.each do |m|
-      .main__routing-ber__box
-        .main__routing-ber__box__time-todo
-          .main__routing-ber__box__time-todo__deadline
-          .main__routing-ber__box__time-todo__time
-            時　間：
-            = m.time.truncate(15)
-          .main__routing-ber__box__time-todo__todo
-            行う事：
-            = m.comment.truncate(15)
-        .main__routing-ber__box__edit-delete
-          .main__routing-ber__box__edit-delete__detailbtn
-            = link_to '詳細',memo_path(m.id), class:'routing-detail' 
-          .main__routing-ber__box__edit-delete__editbtn
-            = link_to '編集',edit_memo_path(m.id), class:'routing-edit' 
-          .main__routing-ber__box__edit-delete__deletebtn
-            = link_to '削除',memo_path(m.id), method: :delete, class:'routing-delete' 
+      .main__routing-ber__boxtop
+        .main__routing-ber__box
+          .main__routing-ber__box__time-todo
+            .main__routing-ber__box__time-todo__deadline
+            .main__routing-ber__box__time-todo__time
+              時　間：
+              = m.time.truncate(15)
+            .main__routing-ber__box__time-todo__todo
+              行う事：
+              = m.comment.truncate(15)
+          .main__routing-ber__box__edit-delete
+            .main__routing-ber__box__edit-delete__detailbtn
+              = link_to '詳細',memo_path(m.id), class:'routing-detail' 
+            .main__routing-ber__box__edit-delete__editbtn
+              = link_to '編集',edit_memo_path(m.id), class:'routing-edit' 
+            .main__routing-ber__box__edit-delete__deletebtn
+              = link_to '削除',memo_path(m.id), method: :delete, class:'routing-delete' 
 
     
   .main__month-day
@@ -33,34 +34,44 @@
         .main__month-day__month-ber__letter-link__link
           = link_to '新規投稿',new_mmemo_path, class:'month-new'
       - @mmemos.each do |mm|
-        .main__month-day__month-ber__box
-          .main__month-day__month-ber__box__detailbtn-todo       
-            .main__month-day__month-ber__box__detailbtn-todo__detailbtn
-              期　限：
-              = mm.deadline.truncate(25)
-            .main__month-day__month-ber__box__detailbtn-todo__todo
-              行う事：
-              = mm.comment.truncate(25)
-          .main__month-day__month-ber__box__edit-delete
-            .main__month-day__month-ber__box__edit-delete__detailbtn
-              = link_to '詳細',mmemo_path(mm.id), class:'month-detail'  
-            .main__month-day__month-ber__box__edit-delete__editbtn  
-              = link_to '編集',edit_mmemo_path(mm.id), class:'month-edit'  
-            .main__month-day__month-ber__box__edit-delete__deletebtn
-              = link_to '削除',mmemo_path(mm.id),method: :delete,class:'month-delete'
+        .main__month-day__month-ber__boxtop
+          .main__month-day__month-ber__box
+            .main__month-day__month-ber__box__detailbtn-todo       
+              .main__month-day__month-ber__box__detailbtn-todo__detailbtn
+                期　限：
+                = mm.deadline.truncate(25)
+              .main__month-day__month-ber__box__detailbtn-todo__todo
+                行う事：
+                = mm.comment.truncate(25)
+            .main__month-day__month-ber__box__edit-delete
+              .main__month-day__month-ber__box__edit-delete__detailbtn
+                = link_to '詳細',mmemo_path(mm.id), class:'month-detail'  
+              .main__month-day__month-ber__box__edit-delete__editbtn  
+                = link_to '編集',edit_mmemo_path(mm.id), class:'month-edit'  
+              .main__month-day__month-ber__box__edit-delete__deletebtn
+                = link_to '削除',mmemo_path(mm.id),method: :delete,class:'month-delete'
 
 
     .main__month-day__today-ber
-      その日のルーティング
-      .main__month-day__today-ber__box
-        .main__month-day__month-ber__box__time-todo           
-          .main__month-day__today-ber__box__todo
-            2018月01日12日
-          .main__month-day__today-ber__box__todo
-            職務履歴書
-        .main__month-day__month-ber__edit-delete
-          .main__month-day__month-ber__edit-delete__editbtn  
-            = link_to '編集', class:'routing-edit'   
-          .main__month-day__month-ber__edit-delete__deletebtn
-            = link_to '削除', class:'routing-delete'
+      .main__month-day__today-ber__letter-link
+        .main__month-day__today-ber__letter-link__letter
+          その日のルーティング
+        .main__month-day__today-ber__letter-link__link
+          = link_to '新規投稿',new_dmemo_path, class:'today-new'
+
+      - @dmemos.each do |dm|  
+        .main__month-day__today-ber__boxtop   
+          .main__month-day__today-ber__box
+            .main__month-day__today-ber__box__detailbtn-todo           
+              .main__month-day__today-ber__box__detailbtn-todo__detailbtn
+                2018月01日12日
+              .main__month-day__today-ber__box__detailbtn-todo__todo
+                職務履歴書
+            .main__month-day__today-ber__box__edit-delete
+              .main__month-day__today-ber__box__edit-delete__detailbtn
+                = link_to '詳細',root_path, class:'today-detail'
+              .main__month-day__today-ber__box__edit-delete__editbtn  
+                = link_to '編集',root_path, class:'today-edit'   
+              .main__month-day__today-ber__box__edit-delete__deletebtn
+                = link_to '削除',root_path, class:'today-delete'
           
