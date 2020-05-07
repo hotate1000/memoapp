@@ -2,7 +2,7 @@
 .new-memo-body
   .new-memo-main
     .new-memo-main__title
-      新規登録ページ（短期の予定）
+      更新ページ（短期の予定）
     =form_with model: @dmemo, class:"new-form" ,local: true do |dm|
       .new-form__timebox
         .new-form__timebox__letter
@@ -12,4 +12,4 @@
         .new-form__commentbox__letter
           行う事　：    
         =dm.text_area :comment, class:"new-form__commentbox__comment", placeholder:"  入力してください。"
-      =dm.submit "投稿する",class:"new-form__submit"
+      =dm.submit "更新する",class:"new-form__submit"

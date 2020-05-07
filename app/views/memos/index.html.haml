@@ -51,11 +51,10 @@
               .main__month-day__month-ber__box__edit-delete__deletebtn
                 = link_to '削除',mmemo_path(mm.id),method: :delete,class:'month-delete'
 
-
     .main__month-day__today-ber
       .main__month-day__today-ber__letter-link
         .main__month-day__today-ber__letter-link__letter
-          その日のルーティング
+          短期の予定
         .main__month-day__today-ber__letter-link__link
           = link_to '新規投稿',new_dmemo_path, class:'today-new'
 
@@ -64,14 +63,16 @@
           .main__month-day__today-ber__box
             .main__month-day__today-ber__box__detailbtn-todo           
               .main__month-day__today-ber__box__detailbtn-todo__detailbtn
-                2018月01日12日
+                期　限：
+                = dm.deadline.truncate(25)
               .main__month-day__today-ber__box__detailbtn-todo__todo
-                職務履歴書
+                行う事：
+                = dm.comment.truncate(25)
             .main__month-day__today-ber__box__edit-delete
               .main__month-day__today-ber__box__edit-delete__detailbtn
-                = link_to '詳細',root_path, class:'today-detail'
+                = link_to '詳細',dmemo_path(dm.id), class:'today-detail'
               .main__month-day__today-ber__box__edit-delete__editbtn  
-                = link_to '編集',root_path, class:'today-edit'   
+                = link_to '編集',edit_dmemo_path(dm.id), class:'today-edit'   
               .main__month-day__today-ber__box__edit-delete__deletebtn
-                = link_to '削除',root_path, class:'today-delete'
+                = link_to '削除',dmemo_path(dm.id),method: :delete, class:'today-delete'
           

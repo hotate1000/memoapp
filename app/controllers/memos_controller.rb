@@ -10,7 +10,7 @@ class MemosController < ApplicationController
   end
 
   def create
-    @memo = Memo.create(memo_params)
+    memo = Memo.create(memo_params)
     redirect_to root_path
   end
 
