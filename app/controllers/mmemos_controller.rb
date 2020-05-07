@@ -1,14 +1,11 @@
 class MmemosController < ApplicationController
-
-  def index
-  end
   
   def new
     @mmemo = Mmemo.new
   end
 
   def create
-    @mmemo = Mmemo.create(mmemo_params)
+    mmemo = Mmemo.create(mmemo_params)
     redirect_to root_path
   end
 

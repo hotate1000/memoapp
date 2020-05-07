@@ -1,0 +1,15 @@
+= render "memos/header"
+.new-memo-body
+  .new-memo-main
+    .new-memo-main__title
+      更新ページ（短期の予定）
+    =form_with model: @dmemo, class:"new-form" ,local: true do |dm|
+      .new-form__timebox
+        .new-form__timebox__letter
+          期　限　：
+        =dm.text_field :deadline, class:"new-form__timebox__time",placeholder:"  入力してください。"
+      .new-form__commentbox
+        .new-form__commentbox__letter
+          行う事　：    
+        =dm.text_area :comment, class:"new-form__commentbox__comment", placeholder:"  入力してください。"
+      =dm.submit "更新する",class:"new-form__submit"

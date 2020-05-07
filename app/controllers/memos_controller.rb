@@ -2,6 +2,7 @@ class MemosController < ApplicationController
   def index
     @memos = Memo.all
     @mmemos = Mmemo.all
+    @dmemos = Dmemo.all
   end
 
   def new
@@ -9,7 +10,7 @@ class MemosController < ApplicationController
   end
 
   def create
-    @memo = Memo.create(memo_params)
+    memo = Memo.create(memo_params)
     redirect_to root_path
   end
 

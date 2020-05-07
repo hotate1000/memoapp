@@ -1,3 +1,16 @@
+@mixin new-btn() {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(118, 218, 255);
+  filter: drop-shadow(1px 1px 1px rgba(60,60,60,5));
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  border: solid 1px rgb(0, 0, 0);
+  font-size: 14px;
+  width: 70px;
+}
 @mixin btn() {
   text-decoration: none;
   background-color: rgb(235, 235, 235);
@@ -20,12 +33,30 @@
   justify-content: center;
   margin-top:30px;
   &__routing-ber{
-    margin-right: 30px;
-    &__box{
-      width: 350px;
-      background-color: rgb(40, 40, 40);
-      padding:10px 10px 7px 10px;
+    margin-right: 20px;
+    width: 370px;
+    &__letter-link{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 3px;
+      &__letter{
+        padding-right: 10px;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .routing-new{
+        @include new-btn() 
+      }
+    }
+    &__boxtop{
+      padding:10px;
+      background-color: white;
       margin-bottom: 10px;
+    }
+    &__box{
+      width: 100%;
+      background-color: rgb(40, 40, 40);
+      padding:10px 10px 8px 10px;
       color: white;
       &__time-todo{
         padding-bottom:15px;
@@ -63,18 +94,35 @@
     }
   }
 
+
   &__month-day{
     display: flex;
     &__month-ber{
-    margin-right: 10px;
-      .month-new{
-
+    margin-right: 20px;
+    width: 520px;
+      &__letter-link{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3px;
+        &__letter{
+          padding-right: 10px;
+          font-size: 17px;
+          font-weight: 600;
+        }
+        .month-new{
+          @include new-btn() 
+        }
+      }
+      &__boxtop{
+        padding:10px;
+        background-color: white;
+        margin-bottom: 10px;
       }
       &__box{
-        width: 500px;
+        width: 100%;
         background-color:rgb(130, 130, 130);
-        padding:10px 10px 7px 10px;
-        margin-bottom: 10px;
+        padding:10px 10px 8px 10px;
+        // margin-bottom: 10px;
         color: white;
         // border: solid 1px black;
         &__detailbtn-todo{
@@ -84,7 +132,6 @@
           &__todo{
           }
         }
-      
         &__edit-delete{
           display: flex;
           justify-content: center;
@@ -93,8 +140,7 @@
             .month-detail{
               @include btn();
               margin-right: 25px;
-              width: 45px;
-            
+              width: 45px;   
             }
           }
           &__editbtn{
@@ -117,15 +163,64 @@
     }
 
     &__today-ber{
-      &__box{
-        width: 500px;
-        background-color:green;
-
-        &__fikkingtime{
-
+      &__letter-link{
+        width: 520px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3px;
+        &__letter{
+          padding-right: 10px;
+          font-size: 17px;
+          font-weight: 600;
         }
-        &__todo{
-
+        .today-new{
+          @include new-btn();
+        }
+      }
+      &__boxtop{
+        padding:10px;
+        background-color: white;
+        margin-bottom: 10px;
+      }
+      &__box{
+        width: 100%;
+        background-color:rgb(130, 130, 130);
+        padding:10px 10px 7px 10px;
+        // margin-bottom: 10px;
+        color: white;
+        &__detailbtn-todo{
+          padding-bottom:15px;
+          &__detailbtn{
+          }
+          &__todo{
+          }
+        }
+        &__edit-delete{
+          display: flex;
+          justify-content: center;
+          &__detailbtn{
+            text-decoration: none;
+            .today-detail{
+              @include btn();
+              margin-right: 25px;
+              width: 45px;   
+            }
+          }
+          &__editbtn{
+            text-decoration: none;
+            .today-edit{
+              @include btn();
+              margin-right: 25px;
+              width: 45px;
+            }
+          }
+          &__deletebtn{
+            text-decoration: none;
+            .today-delete{
+              @include btn();
+              width: 45px;
+            }
+          }
         }
       }
     }

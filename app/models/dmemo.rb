@@ -1,0 +1,2 @@
+class Dmemo < ApplicationRecord
+end

@@ -8,11 +8,11 @@
         .show-form__timebox__letter
           期　限　：
         .show-form__timebox__time
-          = @mmemo.deadline
+          = @dmemo.deadline
       .show-form__commentbox
         .show-form__commentbox__letter        
           行う事　：
         .show-form__commentbox__comment
-          = @mmemo.comment 
+          = @dmemo.comment 
       .show-form__submit
-        =link_to '編集',edit_mmemo_path,class: 'show-form__submit__link'
+        =link_to '編集',edit_dmemo_path,class: 'show-form__submit__link'
