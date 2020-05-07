@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :memos
   resources :mmemos
   resources :dmemos
+  resources :users, only:[:edit, :update]
 end

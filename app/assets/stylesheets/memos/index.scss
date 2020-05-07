@@ -25,13 +25,37 @@
   color: black;
 }
 
+
+.user{
+  margin-top:10px;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  &__letter-name{
+    display: flex;
+  
+  }
+  .user-edit{
+    @include new-btn();
+    margin-left: 10px;
+    background-color: rgb(255, 187, 0);
+    font-weight: 100;
+
+  }
+}
+
+
+
 .main{
   height: 100vh;
   max-width: 1600px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top:30px;
+  margin-top:20px;
   &__routing-ber{
     margin-right: 20px;
     width: 370px;
