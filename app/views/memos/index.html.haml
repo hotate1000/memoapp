@@ -1,4 +1,15 @@
 = render "header"
+.user
+  .user__letter-name
+    .user__letter-name__letter
+      ユーザー名：
+    .user__letter-name__name
+      = current_user.name
+  .user__edit
+    = link_to'編集',edit_user_path(current_user),class:'user-edit' 
+  .user__delete
+    = link_to'ログアウト',destroy_user_session_path,method: :delete,class:'user-delete'
+
 .main
   .main__routing-ber
     .main__routing-ber__letter-link
