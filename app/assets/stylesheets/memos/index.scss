@@ -27,23 +27,29 @@
 
 
 .user{
-  margin-top:10px;
+  margin-top:15px;
   display: flex;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   text-align: center;
   align-items: center;
   justify-content: center;
   &__letter-name{
     display: flex;
-  
   }
   .user-edit{
+    @include new-btn();
+    margin-left: 20px;
+    background-color: rgb(255, 187, 0);
+    font-weight: 100;
+    width: 80px;
+  }
+  .user-delete{
     @include new-btn();
     margin-left: 10px;
     background-color: rgb(255, 187, 0);
     font-weight: 100;
-
+    width: 80px;
   }
 }
 
@@ -55,10 +61,11 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top:20px;
+  margin-top:45px;
   &__routing-ber{
     margin-right: 20px;
     width: 370px;
+    min-width: 370px;
     &__letter-link{
       display: flex;
       justify-content: center;
