@@ -20,7 +20,7 @@
 • 予定登録、編集、詳細表示、削除<br>
 
 ### ユーザー登録
-gemファイルの「devise」を導入し、名前、メールアドレス、パスワードにてユーザー登録を実装しています。<br>
+gemファイルの「devise」を導入し、名前、メールアドレス、パスワードにてユーザー登録を実装しました。<br>
 <img width="1401" alt="新規登録" src="https://user-images.githubusercontent.com/58103579/81365665-bb458600-9123-11ea-9caa-d7f45d04ee99.png">
 <br>
 
