@@ -31,6 +31,6 @@ class MmemosController < ApplicationController
 
   private
   def mmemo_params
-    params.require(:mmemo).permit(:deadline,:comment)
+    params.require(:mmemo).permit(:deadline,:comment).merge(user_id: current_user.id)
   end
 end

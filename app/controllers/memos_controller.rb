@@ -37,6 +37,6 @@ class MemosController < ApplicationController
   
   private 
   def memo_params
-    params.require(:memo) .permit(:deadline,:time,:comment)
+    params.require(:memo) .permit(:deadline,:time,:comment).merge(user_id: current_user.id)
   end
 end
