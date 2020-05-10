@@ -6,7 +6,13 @@ class MmemosController < ApplicationController
 
   def create
     mmemo = Mmemo.create(mmemo_params)
-    redirect_to root_path
+    if mmemo.save
+      flash[:memo] = 'メモを作成しました。'
+      redirect_to root_path
+    else
+      flash[:memo] = '入力項目を入力してください。'
+      redirect_to new_mmemo_path
+    end
   end
 
   def show
@@ -19,14 +25,24 @@ class MmemosController < ApplicationController
 
   def update
     mmemo = Mmemo.find(params[:id])
-    mmemo.update(mmemo_params)
-    redirect_to root_path
+    if mmemo.update(mmemo_params)
+      flash[:memo] = 'メモを更新しました。'
+      redirect_to root_path
+    else
+      flash[:memo] = '入力項目を入力してください。'
+      redirect_to edit_mmemo_path
+    end
   end
 
   def destroy
     mmemo = Mmemo.find(params[:id])
-    mmemo.destroy
-    redirect_to root_path
+    if mmemo.destroy
+      flash[:memo] = 'メモを削除しました。'
+      redirect_to root_path
+    else
+      flash[:memo] = 'メモを削除出来ませんでした。'
+      redirect_to root_path
+    end
   end
 
   private
