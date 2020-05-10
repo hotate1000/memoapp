@@ -1,5 +1,7 @@
 class DmemosController < ApplicationController
 
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  
   def new
     @dmemo = Dmemo.new
   end
@@ -45,8 +47,18 @@ class DmemosController < ApplicationController
     end
   end
 
+
   private
+
   def dmemo_params
     params.require(:dmemo).permit(:deadline,:comment).merge(user_id: current_user.id)
+  end
+
+  def correct_user
+    @dmemo = current_user.dmemos.find_by(id: params[:id])
+      unless @dmemo
+        flash[:memo] = '他ユーザーの情報へはアクセス出来ません。'
+        redirect_to root_path
+      end
   end
 end
