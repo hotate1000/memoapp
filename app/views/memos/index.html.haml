@@ -35,7 +35,7 @@
               .main__routing-ber__box__edit-delete__editbtn
                 = link_to '編集',edit_memo_path(m.id), class:'routing-edit' 
               .main__routing-ber__box__edit-delete__deletebtn
-                = link_to '削除',memo_path(m.id), method: :delete, class:'routing-delete' 
+                = link_to '削除',memo_path(m.id), method: :delete, class:'routing-delete', data: { confirm: "本当にコメントを削除してもよろしいですか？" }
 
     
   .main__month-day
@@ -62,7 +62,7 @@
                 .main__month-day__month-ber__box__edit-delete__editbtn  
                   = link_to '編集',edit_mmemo_path(mm.id), class:'month-edit'  
                 .main__month-day__month-ber__box__edit-delete__deletebtn
-                  = link_to '削除',mmemo_path(mm.id),method: :delete,class:'month-delete'
+                  = link_to '削除',mmemo_path(mm.id),method: :delete,class:'month-delete', data: { confirm: "本当にコメントを削除してもよろしいですか？" }
 
     .main__month-day__today-ber
       .main__month-day__today-ber__letter-link
@@ -88,5 +88,5 @@
                 .main__month-day__today-ber__box__edit-delete__editbtn  
                   = link_to '編集',edit_dmemo_path(dm.id), class:'today-edit'   
                 .main__month-day__today-ber__box__edit-delete__deletebtn
-                  = link_to '削除',dmemo_path(dm.id),method: :delete, class:'today-delete'
+                  = link_to '削除',dmemo_path(dm.id),method: :delete, class:'today-delete', data: { confirm: "本当にコメントを削除してもよろしいですか？" }
             
