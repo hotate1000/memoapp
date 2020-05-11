@@ -1,6 +1,6 @@
 class DmemosController < ApplicationController
 
-  before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, except: [:index]
   
   def new
     @dmemo = Dmemo.new
