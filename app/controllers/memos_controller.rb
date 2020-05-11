@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
 
-  before_action :correct_user, except: [:index]
+  before_action :correct_user, except: [:index, :new, :create]
 
   def index
     @memos = Memo.all

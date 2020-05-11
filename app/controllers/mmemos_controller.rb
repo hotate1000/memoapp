@@ -1,6 +1,6 @@
 class MmemosController < ApplicationController
   
-  before_action :correct_user, except: [:index]
+  before_action :correct_user, except: [:index, :new, :create]
 
   def new
     @mmemo = Mmemo.new
