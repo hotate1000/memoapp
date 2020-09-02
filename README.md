@@ -3,7 +3,7 @@
 <br>
 <br>
 
-# 本願環境URL
+# 本番環境URL
 https://memoapp1000.herokuapp.com/
 
 # 制作経緯
