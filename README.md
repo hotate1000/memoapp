@@ -4,6 +4,8 @@
 <br>
 
 # 本番環境URL
+• テストアドレス：tesuto@mail<br>
+• テストパスワード：tesuto<br>
 https://memoapp1000.herokuapp.com/
 
 # 制作経緯
