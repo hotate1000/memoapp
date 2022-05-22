@@ -3,15 +3,15 @@
 <br>
 <br>
 
-# 本番環境URL
-• テストアドレス：tesuto@mail<br>
-• テストパスワード：tesuto<br>
-https://memoapp1000.herokuapp.com/
-
 # 制作経緯
 未経験からシステムエンジニアを目指し、日々勉強しております。<br>
 日々の予定を管理できるように簡単なメモアプリを作成しました。<br>
 <br>
+
+# 本番環境URL
+• テストアドレス：tesuto@mail<br>
+• テストパスワード：tesuto<br>
+https://memoapp1000.herokuapp.com/
 
 # 使用技術
 • Ruby<br>
